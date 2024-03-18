@@ -1,0 +1,105 @@
+@include laptop {
+  .all-padding {
+    padding: 0 32px;
+  }
+
+  .name .pf-desc {
+    font-size: 30px;
+  }
+
+  .profile-mobile {
+    display: none;
+  }
+
+  #profile-img {
+    width: 300px;
+  }
+
+  .cards-flex {
+    flex-wrap: wrap;
+  }
+
+  .cards-flex {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+}
+
+@include tablet {
+  .all-padding {
+    padding: $max-padding;
+  }
+
+  .cards-flex {
+    grid-template-columns: repeat(1, minmax(266px, 1fr));
+  }
+
+  .name .pf-name {
+    font-size: clamp(3rem, 12vw, 5rem);
+  }
+
+  .name .pf-desc {
+    font-size: clamp(1.5rem, 5vw, 5rem);
+  }
+
+  #btns-p .btn {
+    font-size: 14px;
+    padding: $btn-padding-small;
+  }
+
+  .name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // NAV
+
+  .nav {
+    background-color: black;
+    height: 100vh;
+    position: fixed;
+    display: none;
+
+    ul {
+      display: block;
+      width: 100%;
+    }
+
+    a {
+      display: block;
+      border-radius: 0;
+    }
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .cards-flex {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+@include mobile {
+  #btns-p {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .name .pf-name {
+    font-size: clamp(1rem, 13vw, 5rem);
+  }
+
+  .name .pf-desc {
+    font-size: clamp(1rem, 5vw, 5rem);
+  }
+
+  #profile-img {
+    width: clamp(150px, 70%, 300px);
+  }
+}

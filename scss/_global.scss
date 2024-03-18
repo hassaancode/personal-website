@@ -1,0 +1,139 @@
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+
+  ::-webkit-scrollbar {
+    width: 14px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(156, 156, 156);
+    border-radius: 100vw;
+    border: 3px solid $clr-bg-main;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(125, 125, 125);
+  }
+}
+
+body {
+  font-family: inter;
+  color: $clr-white;
+  background-color: $clr-bg-main;
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: $maxgap;
+}
+// SPACING
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: $max-width;
+  min-width: $min-width;
+  padding: $max-padding;
+}
+
+.header-container {
+  max-width: $max-width;
+  min-width: $min-width;
+  margin: auto;
+}
+.default-padding {
+  background-color: $clr-bg-20;
+  border-radius: 5px;
+  padding: 16px;
+}
+// *** SECTIONS ***
+main section:not(:first-child) {
+  padding: $sectpad;
+  border-top: $clr-border;
+}
+
+main section#copy {
+  text-align: center;
+}
+
+// *** FLEXES ***
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &-ai-c {
+    align-items: center;
+  }
+  &-wrap {
+    flex-wrap: wrap;
+  }
+  &-dir-col {
+    flex-direction: column;
+  }
+  &-dir-row {
+    flex-direction: row;
+  }
+}
+
+.flex-y {
+  flex-direction: column;
+}
+
+.flex-x {
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+//*** HEADINGS & tags defaults ***
+.header-padding {
+  padding-top: 16px;
+}
+
+p.header-padding {
+  text-align: justify;
+  font-size: $body-l;
+  line-height: 1.5rem;
+}
+
+h2 {
+  font-size: $heading-medium;
+  border-bottom: solid 2px $clr-primary;
+  padding-block-end: 5px;
+  display: inline-block;
+}
+
+h3 {
+  color: $clr-primary;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  width: auto;
+}
+
+a.link-highlight {
+  color: $clr-primary;
+  text-decoration: underline;
+
+  &:hover {
+    color: white;
+  }
+}

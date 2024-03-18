@@ -1,0 +1,13 @@
+@keyframes fade-in {
+  from {
+    visibility: visible;
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}

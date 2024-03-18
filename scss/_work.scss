@@ -1,0 +1,28 @@
+.cards-flex {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card img {
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  transition: all 300ms;
+  &:hover {
+    filter: brightness(120%);
+  }
+}
+
+.card div {
+  padding: 24px;
+  background-color: $clr-bg-20;
+}

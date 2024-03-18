@@ -1,0 +1,117 @@
+/* -----------Nav Bar Component--------*/
+
+.header {
+  position: relative;
+  z-index: 10;
+
+  &.open {
+    .header__toggle {
+      > span:first-child {
+        transform: rotate(45deg);
+      }
+      > span:nth-child(2) {
+        opacity: 0;
+      }
+      > span:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+    .header__menu {
+      animation: fade-in 200ms forwards;
+    }
+  }
+  nav {
+    padding: 18px 24px;
+    border-bottom: $clr-border;
+  }
+  &__logo {
+    img {
+      display: block;
+      width: 25px;
+    }
+  }
+  &__toggle {
+    > span {
+      display: block;
+      background-color: rgb(255, 255, 255);
+      width: 28px;
+      height: 2px;
+      transition: all 500ms cubic-bezier(0.425, 1.65, 0.195, 1.005);
+      transform-origin: 3px 1px;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    max-width: $max-width;
+    gap: 20px;
+    left: 0;
+    right: 0;
+
+    a {
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: map-get($font-weight, me);
+      text-align: center;
+    }
+
+    a:hover {
+      background-color: $clr-primary;
+
+      color: black;
+    }
+  }
+  &__menu {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 50px;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    left: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    z-index: -1;
+    background-color: rgb(0, 0, 0);
+    box-shadow: black 20px 20px 20px;
+    a {
+      display: block;
+      padding: 16px;
+      font-size: $heading-small;
+      border-bottom: rgb(23, 23, 23) solid 1px;
+
+      &:hover {
+        background-color: $clr-primary;
+        color: black;
+        font-weight: map-get($font-weight, medium);
+      }
+      &:active {
+        background-color: $clr-white;
+      }
+      &:focus {
+        background-color: $clr-white;
+      }
+    }
+  }
+}
+
+.hide-for-desktop {
+  @include tabletup {
+    display: none;
+  }
+}
+
+.hide-for-mobile {
+  @include tablet {
+    display: none;
+  }
+}

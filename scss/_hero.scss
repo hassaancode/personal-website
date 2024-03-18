@@ -1,0 +1,78 @@
+/* ----------PROFILE------------ */
+
+#home {
+  /* border: 1px red solid; */
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: -100px;
+}
+
+.hero-profile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  gap: 100px;
+}
+
+.pf-desc {
+  color: $clr-primary;
+  font-family: monospace;
+  font-size: $heading-large;
+  font-weight: map-get($font-weight, medium);
+}
+
+#scroll {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pf-name {
+  color: #fff;
+  font-family: Inter;
+  font-size: 84px;
+  font-weight: map-get($font-weight, large);
+}
+
+#profile-img {
+  width: 428px;
+
+  border-radius: 50%;
+  box-shadow: 0px 0px 250px 0px rgba(255, 255, 255, 0.21);
+}
+
+/* buttons Component*/
+
+#btns-p {
+  display: flex;
+  gap: 20px;
+}
+
+#btns-p .btn {
+  font-weight: map-get($font-weight, large);
+  color: $clr-bg-main;
+  background-color: $clr-primary;
+  padding: $btn-padding;
+  border-radius: 50px;
+  user-select: none;
+  cursor: pointer;
+}
+
+#btns-p .btn:nth-child(2) {
+  background-color: unset;
+  color: $clr-white;
+  border: $clr-primary solid 1px;
+}
+
+#btns-p .btn:nth-child(2):hover {
+  background-color: $clr-primary;
+  color: $clr-bg-main;
+}

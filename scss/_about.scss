@@ -1,0 +1,49 @@
+#about {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+}
+
+.about-sect {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.about {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skillcontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(266px, 1fr));
+  width: 100%;
+  height: auto;
+
+  &__skillcomponent {
+    width: 100%;
+    height: auto;
+    background-color: $clr-bg-20;
+    border-radius: 5px;
+    padding: 14px;
+  }
+}
+
+.skill-element {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .skillyear {
+    padding: 10px;
+    background-color: black;
+    color: $clr-primary;
+    border-radius: 100px;
+    font-size: $body-xs;
+  }
+}
