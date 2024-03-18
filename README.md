@@ -3,5 +3,5 @@
 
 > Personal Landing Page Website Made Using HTML and SCSS
 
-# Website Preview
+## Website Preview
 Link: https://hassaancode.github.io/personal-website/      
